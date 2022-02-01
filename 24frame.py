@@ -8,11 +8,8 @@ dna = 'ATGGCCTTT'
 
 # single loop
 for i in range(len(dna)):
-	print(i, end=' ')
-	if i % 3 == 2: print(2, end=' ')
-	if i % 3 == 1: print(1, end=' ')
-	if i % 3 == 0: print(0, end=' ')
-	print(dna[i])
+	print(i, i%3, dna[i])
+	
 print()
 
 # nested loop

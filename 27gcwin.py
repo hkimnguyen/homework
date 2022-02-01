@@ -3,23 +3,29 @@
 # Write a program that computes the GC fraction of a DNA sequence in a window
 # Window size is 11 nt
 # Output with 4 significant figures using whichever method you prefer
-# Use nested loops
+# Use no nested loops. Instead, count only the first window
+# Then 'move' the window by adding 1 letter on one side
+# And subtracting 1 letter from the other side
+# Describe the pros/cons of this algorith vs. nested loops
 
 seq = 'ACGACGCAGGAGGAGAGTTTCAGAGATCACGAATACATCCATATTACCCAGAGAGAG'
 w = 11
+GC = 0
 
-for window in range(len(seq)-w+1):
-	for i in range(window, len(seq) -(w-1), len(seq)+1):
-		frame = seq[i:i+w]
-		GC = 0 
-		for k in range(w):
-			if  frame[k] == 'G': GC += 1
-			if  frame[k] == 'C': GC += 1
-	print(window, frame, '%.4f' % (GC/len(frame)))
+for nt in seq[:w]:
+	if nt == 'C' or nt == 'G': GC+= 1
 
+for i in range(len(seq)-w+1):
+	if seq[i]     == 'C' or seq[i]     == 'G': GC -= 1
+	if seq[i+w-1] == 'C' or seq[i+w-1] == 'G': GC += 1
+	print(i, seq[i:i+w], '%.4f' % (GC/w))
+	
+
+# pros: works faster/more efficient
+# cons: took a long time to figure out/not intuitive
 # worked with Iris and Inglis
 """
-python3 26gcwin.py
+python3 27gcwin.py
 0 ACGACGCAGGA 0.6364
 1 CGACGCAGGAG 0.7273
 2 GACGCAGGAGG 0.7273

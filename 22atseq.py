@@ -15,21 +15,18 @@ random.seed(1) # comment-out this line to change sequence each time
 
 
 dna = ''
-
 for i in range(30):
 	r = random.random()
 	if    r > 0.6:
-		if r >0.5:
-			dna += 'G'
+		if r > 0.5: dna += 'G'
 		else: dna += 'C'
 	else: 
-		if r > 0.5:
-			dna +='A'
+		if r > 0.5: dna +='A'
 		else: dna += 'T'
 
 AT = 0
 for i in range(len(dna)):
-	if dna[i] == 'A': AT += 1
+	if   dna[i] == 'A': AT += 1
 	elif dna[i] == 'T': AT += 1
 
 print(len(dna),AT/len(dna), dna)

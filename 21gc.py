@@ -8,7 +8,7 @@ dna = 'ACAGAGCCAGCAGATATACAGCAGATACTAT' # feel free to change
 
 GC = 0
 for i in range(len(dna)):
-	if dna[i] == 'G': GC += 1
+	if   dna[i] == 'G': GC += 1
 	elif dna[i] == 'C': GC += 1
 
 print(f'{GC/len(dna):.2f}')
