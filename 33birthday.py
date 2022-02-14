@@ -25,10 +25,10 @@ for k in range(trials):
 	for i in range(people):
 		birthday = random.randint(0, days - 1)
 		calendar[birthday] += 1
-	#print(calendar)	
-	collision = False
+	# print(calendar)	
+	collision = False #flag to check collisions
 	for v in calendar: 
-		if v > 1: 
+		if v > 1: # only need one collision to include in probability
 			collision = True
 	if collision: shared += 1
 		
