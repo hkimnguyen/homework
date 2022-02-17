@@ -28,7 +28,6 @@ v = 0
 l = 0
 s = 0
 
-
 assert(len(sys.argv) == 2) # requires exactly 2 items in command line
 with open(sys.argv[1]) as fp:
 	for line in fp.readlines():
@@ -57,7 +56,6 @@ with open(sys.argv[1]) as fp:
 				if aa == 'V': v += 1
 				if aa == 'L': l += 1
 				if aa == 'S': s += 1
-
 
 print(sys.argv)
 print('W', w, w/total)
