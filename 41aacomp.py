@@ -34,7 +34,7 @@ with open(sys.argv[1]) as fp:
 		if line[0] != '>': 
 			seq = line.rstrip() # need to ignore last character that's not an aa
 			for aa in seq: 
-				if aa != '*': total += 1 # also need to ignore stop codons bc also not aa
+				if aa != '*': total += 1 # also need to ignore bc not aa
 				
 				if   aa == 'W': w += 1
 				elif aa == 'C': c += 1
