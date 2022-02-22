@@ -36,26 +36,26 @@ with open(sys.argv[1]) as fp:
 			for aa in seq: 
 				if aa != '*': total += 1 # also need to ignore stop codons bc also not aa
 				
-				if aa == 'W': w += 1
-				if aa == 'C': c += 1
-				if aa == 'H': h += 1
-				if aa == 'M': m += 1
-				if aa == 'Y': y += 1
-				if aa == 'Q': q += 1
-				if aa == 'F': f += 1
-				if aa == 'N': n += 1
-				if aa == 'P': p += 1
-				if aa == 'T': t += 1
-				if aa == 'R': r += 1
-				if aa == 'I': i += 1
-				if aa == 'D': d += 1
-				if aa == 'G': g += 1
-				if aa == 'A': a += 1
-				if aa == 'K': k += 1
-				if aa == 'E': e += 1
-				if aa == 'V': v += 1
-				if aa == 'L': l += 1
-				if aa == 'S': s += 1
+				if   aa == 'W': w += 1
+				elif aa == 'C': c += 1
+				elif aa == 'H': h += 1
+				elif aa == 'M': m += 1
+				elif aa == 'Y': y += 1
+				elif aa == 'Q': q += 1
+				elif aa == 'F': f += 1
+				elif aa == 'N': n += 1
+				elif aa == 'P': p += 1
+				elif aa == 'T': t += 1
+				elif aa == 'R': r += 1
+				elif aa == 'I': i += 1
+				elif aa == 'D': d += 1
+				elif aa == 'G': g += 1
+				elif aa == 'A': a += 1
+				elif aa == 'K': k += 1
+				elif aa == 'E': e += 1
+				elif aa == 'V': v += 1
+				elif aa == 'L': l += 1
+				elif aa == 'S': s += 1
 
 print(sys.argv)
 print('W', w, w/total)
