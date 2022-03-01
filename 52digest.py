@@ -34,11 +34,11 @@ def readfile(filename):
 
 # enzyme digest
 def digest(seq, site):
-	fragments = [0]
+	fragments = [0] # [0] adds the first fragment
 	for match in re.finditer(site, seq):
 		# print(match.group(), match.start(), match.end())
 		fragments.append(match.start())
-	fragments.append(len(seq))
+	fragments.append(len(seq)) # adds the last fragment
 	return fragments
 
 
@@ -48,7 +48,6 @@ fragments = digest(seq, site)
 for i in range(len(fragments) - 1):
 	lengths = fragments[i + 1] - fragments[i]
 	print(lengths)
-# missing the first fragment
 
 
 """
